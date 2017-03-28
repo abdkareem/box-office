@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "node ./bin/start.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongoose": "^4.9.2"
+  }
+}
