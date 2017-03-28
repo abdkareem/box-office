@@ -11,7 +11,7 @@ var movieSchema = mongoose.Schema({
 })
 
 // use above Schema to create a model 
-var movie = mongoose.model('AllMovies', movieSchema)
+var allmovie = mongoose.model('allmovie', movieSchema)
 
 // export movies model
-module.exports = movie
+module.exports = allmovie
