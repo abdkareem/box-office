@@ -1,17 +1,9 @@
-/*// test variables
+/* 
+// test variables use this object2 template when creating your new document.
 var object2 = {
-	"_id" : ObjectId("58d9bf62d88558d09ce7630e"),
-	"name" : "Assassin's Creed",
-	"year" : 2016,
-	"director" : "Justin Kurzel",
-	"music" : "Jed Kurzel",
-	"cast" : [
-		"Michael Fassbender",
-		"Marion Cotillard",
-		"Jeremy Irons"
-	]
-}
-*/
+	"name" : "Assassin's Creed", "year" : 2016, "director" : "Justin Kurzel", "music" : "Jed Kurzel",
+	"cast" : ["Michael Fassbender", "Marion Cotillard", "Jeremy Irons"]
+} */
 
 // load external modules
 var express = require('express');
@@ -25,9 +17,13 @@ var router = express.Router();
 
 // handle urls
 router.get('/', function(request, response) {
-    response.send('Welcome, you are at root');
+    // now using jade so below not needed
+    // response.send('Welcome, you are at root');
+
+    response.render('index', {title: 'BoxOffice'});
 })
 
+/*
 router.get('/allmovies', function(request, response) {
     console.log("Entered in get")
     /*
@@ -47,6 +43,7 @@ router.get('/allmovies', function(request, response) {
         //console.log('Successfully Saved!', data)
     }) 
     */
+    /*
     allmovie.find(function(err, data) {
         console.log("Entered in find call back")
         if (err) {
@@ -56,6 +53,8 @@ router.get('/allmovies', function(request, response) {
         response.send(data)
     })
 })
+
+*/
 
 // export router so that it can be used by app. Note: app inturn is used by server
 module.exports = router;
